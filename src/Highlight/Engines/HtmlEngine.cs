@@ -15,23 +15,28 @@ namespace Highlight.Engines
 
         protected override string PreHighlight(Definition definition, string input)
         {
-            if (definition == null) {
+            if (definition == null)
+            {
                 throw new ArgumentNullException("definition");
             }
 
             return HttpUtility.HtmlEncode(input);
         }
 
+
         protected override string PostHighlight(Definition definition, string input)
         {
-            if (definition == null) {
+            if (definition == null)
+            {
                 throw new ArgumentNullException("definition");
             }
 
-            if (!UseCss) {
-                var cssStyle = HtmlEngineHelper.CreatePatternStyle(definition.Style);
+            input = $"<pre>{input}</pre>";
+            if (!UseCss)
+            {
+                var patternStyle = HtmlEngineHelper.CreatePatternStyle(definition.Style);
 
-                return String.Format(StyleSpanFormat, cssStyle, input);
+                return String.Format(StyleSpanFormat, patternStyle, input);
             }
 
             var cssClassName = HtmlEngineHelper.CreateCssClassName(definition.Name, null);
@@ -41,7 +46,8 @@ namespace Highlight.Engines
 
         protected override string ProcessBlockPatternMatch(Definition definition, BlockPattern pattern, Match match)
         {
-            if (!UseCss) {
+            if (!UseCss)
+            {
                 var patternStyle = HtmlEngineHelper.CreatePatternStyle(pattern.Style);
 
                 return String.Format(StyleSpanFormat, patternStyle, match.Value);
@@ -54,18 +60,22 @@ namespace Highlight.Engines
 
         protected override string ProcessMarkupPatternMatch(Definition definition, MarkupPattern pattern, Match match)
         {
-            if (definition == null) {
+            if (definition == null)
+            {
                 throw new ArgumentNullException("definition");
             }
-            if (pattern == null) {
+            if (pattern == null)
+            {
                 throw new ArgumentNullException("pattern");
             }
-            if (match == null) {
+            if (match == null)
+            {
                 throw new ArgumentNullException("match");
             }
 
             var result = new StringBuilder();
-            if (!UseCss) {
+            if (!UseCss)
+            {
                 var patternStyle = HtmlEngineHelper.CreatePatternStyle(pattern.BracketColors, pattern.Style.Font);
                 result.AppendFormat(StyleSpanFormat, patternStyle, match.Groups["openTag"].Value);
 
@@ -74,7 +84,8 @@ namespace Highlight.Engines
                 patternStyle = HtmlEngineHelper.CreatePatternStyle(pattern.Style);
                 result.AppendFormat(StyleSpanFormat, patternStyle, match.Groups["tagName"].Value);
 
-                if (pattern.HighlightAttributes) {
+                if (pattern.HighlightAttributes)
+                {
                     var highlightedAttributes = ProcessMarkupPatternAttributeMatches(definition, pattern, match);
                     result.Append(highlightedAttributes);
                 }
@@ -84,7 +95,8 @@ namespace Highlight.Engines
                 patternStyle = HtmlEngineHelper.CreatePatternStyle(pattern.BracketColors, pattern.Style.Font);
                 result.AppendFormat(StyleSpanFormat, patternStyle, match.Groups["closeTag"].Value);
             }
-            else {
+            else
+            {
                 var cssClassName = HtmlEngineHelper.CreateCssClassName(definition.Name, pattern.Name + "Bracket");
                 result.AppendFormat(ClassSpanFormat, cssClassName, match.Groups["openTag"].Value);
 
@@ -93,7 +105,8 @@ namespace Highlight.Engines
                 cssClassName = HtmlEngineHelper.CreateCssClassName(definition.Name, pattern.Name + "TagName");
                 result.AppendFormat(ClassSpanFormat, cssClassName, match.Groups["tagName"].Value);
 
-                if (pattern.HighlightAttributes) {
+                if (pattern.HighlightAttributes)
+                {
                     var highlightedAttributes = ProcessMarkupPatternAttributeMatches(definition, pattern, match);
                     result.Append(highlightedAttributes);
                 }
@@ -109,7 +122,8 @@ namespace Highlight.Engines
 
         protected override string ProcessWordPatternMatch(Definition definition, WordPattern pattern, Match match)
         {
-            if (!UseCss) {
+            if (!UseCss)
+            {
                 var patternStyle = HtmlEngineHelper.CreatePatternStyle(pattern.Style);
 
                 return String.Format(StyleSpanFormat, patternStyle, match.Value);
@@ -124,24 +138,29 @@ namespace Highlight.Engines
         {
             var result = new StringBuilder();
 
-            for (var i = 0; i < match.Groups["attribute"].Captures.Count; i++) {
+            for (var i = 0; i < match.Groups["attribute"].Captures.Count; i++)
+            {
                 result.Append(match.Groups["ws2"].Captures[i].Value);
-                if (!UseCss) {
+                if (!UseCss)
+                {
                     var patternStyle = HtmlEngineHelper.CreatePatternStyle(pattern.AttributeNameColors, pattern.Style.Font);
                     result.AppendFormat(StyleSpanFormat, patternStyle, match.Groups["attribName"].Captures[i].Value);
 
-                    if (String.IsNullOrWhiteSpace(match.Groups["attribValue"].Captures[i].Value)) {
+                    if (String.IsNullOrWhiteSpace(match.Groups["attribValue"].Captures[i].Value))
+                    {
                         continue;
                     }
 
                     patternStyle = HtmlEngineHelper.CreatePatternStyle(pattern.AttributeValueColors, pattern.Style.Font);
                     result.AppendFormat(StyleSpanFormat, patternStyle, match.Groups["attribValue"].Captures[i].Value);
                 }
-                else {
+                else
+                {
                     var cssClassName = HtmlEngineHelper.CreateCssClassName(definition.Name, pattern.Name + "AttributeName");
                     result.AppendFormat(ClassSpanFormat, cssClassName, match.Groups["attribName"].Captures[i].Value);
 
-                    if (String.IsNullOrWhiteSpace(match.Groups["attribValue"].Captures[i].Value)) {
+                    if (String.IsNullOrWhiteSpace(match.Groups["attribValue"].Captures[i].Value))
+                    {
                         continue;
                     }
 
