@@ -33,7 +33,7 @@ namespace Highlight.Patterns
         public static string Escape(string str)
         {
             if (str.CompareTo(@"\n") != 0) {
-                str = Regex.Escape(str);
+                str = Regex.Escape(System.Net.WebUtility.HtmlEncode(str));
             }
 
             return str;
