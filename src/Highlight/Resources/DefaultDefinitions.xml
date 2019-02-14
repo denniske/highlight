@@ -2,34 +2,34 @@
 <definitions>
   <definition name="ASPX" caseSensitive="false">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="ServerSideBlock" type="block" beginsWith="&amp;lt;%" endsWith="%&amp;gt;">
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="yellow"/>
+      <font name="Courier New" size="11" foreColor="black" backColor="yellow"/>
     </pattern>
     <pattern name="Markup" type="markup" highlightAttributes="true">
-      <font name="Courier New" size="11" style="regular" foreColor="maroon" backColor="transparent">
-        <bracketStyle foreColor="blue" backColor="transparent"/>
-        <attributeNameStyle foreColor="red" backColor="transparent"/>
-        <attributeValueStyle foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="maroon" >
+        <bracketStyle foreColor="blue" />
+        <attributeNameStyle foreColor="red" />
+        <attributeValueStyle foreColor="blue" />
       </font>
     </pattern>
   </definition>
   <definition name="C" caseSensitive="true">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="Comment" type="block" beginsWith="//" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="MultiLineComment" type="block" beginsWith="/*" endsWith="*/">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="String" type="block" beginsWith="&quot;" endsWith="&quot;" escapesWith="\">
-      <font name="Courier New" size="11" style="regular" foreColor="darkred" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="darkred" />
     </pattern>
     <pattern name="WordGroup01" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>write</word>
       <word>while</word>
       <word>volatile</word>
@@ -113,19 +113,19 @@
   </definition>
   <definition name="C++" caseSensitive="true">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="Comment" type="block" beginsWith="//" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="MultiLineComment" type="block" beginsWith="/*" endsWith="*/">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="String" type="block" beginsWith="&quot;" endsWith="&quot;" escapesWith="\">
-      <font name="Courier New" size="11" style="regular" foreColor="darkred" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="darkred" />
     </pattern>
     <pattern name="WordGroup01" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>xor</word>
       <word>while</word>
       <word>volatile</word>
@@ -225,10 +225,10 @@
   </definition>
   <definition name="C#" caseSensitive="true">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="Keyword" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>as</word>
       <word>is</word>
       <word>new</word>
@@ -245,18 +245,18 @@
       <word>null</word>
     </pattern>
     <pattern name="Namespace" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>namespace</word>
       <word>using</word>
     </pattern>
     <pattern name="MethodParameter" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>params</word>
       <word>ref</word>
       <word>out</word>
     </pattern>
     <pattern name="Statement" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>if</word>
       <word>else</word>
       <word>switch</word>
@@ -280,7 +280,7 @@
       <word>lock</word>
     </pattern>
     <pattern name="Modifier" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>internal</word>
       <word>private</word>
       <word>protected</word>
@@ -299,7 +299,7 @@
       <word>volatile</word>
     </pattern>
     <pattern name="ValueType" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>void</word>
       <word>bool</word>
       <word>byte</word>
@@ -318,7 +318,7 @@
       <word>ushort</word>
     </pattern>
     <pattern name="ReferenceType" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>class</word>
       <word>interface</word>
       <word>delegate</word>
@@ -326,7 +326,7 @@
       <word>string</word>
     </pattern>
     <pattern name="Operator" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="red" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="red" />
       <word>+</word>
       <word>-</word>
       <word>=</word>
@@ -336,20 +336,26 @@
       <word>&amp;</word>
       <word>|</word>
     </pattern>
+
+
     <pattern name="String" type="block" beginsWith="&amp;quot;" endsWith="&amp;quot;" escapesWith="\">
-      <font name="Courier New" size="11" style="regular" foreColor="#666666" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="#666666"/>
     </pattern>
     <pattern name="VerbatimString" type="block" beginsWith="@&amp;quot;" endsWith="&amp;quot;">
-      <font name="Courier New" size="11" style="regular" foreColor="#666666" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="#666666"/>
     </pattern>
     <pattern name="Comment" type="block" beginsWith="//" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green"/>
     </pattern>
     <pattern name="MultiLineComment" type="block" beginsWith="/*" endsWith="*/">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green"/>
     </pattern>
+    <pattern name="TypeParameter" type="block" beginsWith="&lt;" endsWith="&gt;" includePatternTags="false">
+      <font name="Courier New" size="11" foreColor="#2B91AF"/>
+    </pattern>
+
     <pattern name="PreprocessorDirective" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue"/>
       <word>#if</word>
       <word>#else</word>
       <word>#elif</word>
@@ -366,19 +372,19 @@
   </definition>
   <definition name="COBOL" caseSensitive="true">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="Comment" type="block" beginsWith="//" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="MultiLineComment" type="block" beginsWith="/*" endsWith="*/">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="String" type="block" beginsWith="&quot;" endsWith="&quot;" escapesWith="\">
-      <font name="Courier New" size="11" style="regular" foreColor="darkred" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="darkred" />
     </pattern>
     <pattern name="WordGroup01" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>ZEROS</word>
       <word>ZERO-FILL</word>
       <word>ZEROES</word>
@@ -994,19 +1000,19 @@
   </definition>
   <definition name="Eiffel" caseSensitive="true">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="Comment" type="block" beginsWith="//" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="MultiLineComment" type="block" beginsWith="/*" endsWith="*/">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="String" type="block" beginsWith="&quot;" endsWith="&quot;" escapesWith="\">
-      <font name="Courier New" size="11" style="regular" foreColor="darkred" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="darkred" />
     </pattern>
     <pattern name="WordGroup01" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>xor</word>
       <word>when</word>
       <word>variant</word>
@@ -1065,19 +1071,19 @@
   </definition>
   <definition name="Fortran" caseSensitive="true">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="Comment" type="block" beginsWith="//" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="MultiLineComment" type="block" beginsWith="/*" endsWith="*/">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="String" type="block" beginsWith="&quot;" endsWith="&quot;" escapesWith="\">
-      <font name="Courier New" size="11" style="regular" foreColor="darkred" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="darkred" />
     </pattern>
     <pattern name="WordGroup01" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>WRITE</word>
       <word>WHILE</word>
       <word>UNION</word>
@@ -1148,19 +1154,19 @@
   </definition>
   <definition name="Haskell" caseSensitive="true">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="Comment" type="block" beginsWith="//" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="MultiLineComment" type="block" beginsWith="/*" endsWith="*/">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="String" type="block" beginsWith="&quot;" endsWith="&quot;" escapesWith="\">
-      <font name="Courier New" size="11" style="regular" foreColor="darkred" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="darkred" />
     </pattern>
     <pattern name="WordGroup01" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>zipWith3</word>
       <word>zipWith</word>
       <word>zip3</word>
@@ -1376,25 +1382,25 @@
   </definition>
   <definition name="HTML" caseSensitive="false">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="MultiLineComment" type="block" beginsWith="&amp;lt;!--" endsWith="--&amp;gt;">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="Markup" type="markup" highlightAttributes="true">
-      <font name="Courier New" size="11" style="regular" foreColor="maroon" backColor="transparent">
-        <bracketStyle foreColor="blue" backColor="transparent"/>
-        <attributeNameStyle foreColor="red" backColor="transparent"/>
-        <attributeValueStyle foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="maroon" >
+        <bracketStyle foreColor="blue" />
+        <attributeNameStyle foreColor="red" />
+        <attributeValueStyle foreColor="blue" />
       </font>
     </pattern>
   </definition>
   <definition name="Java" caseSensitive="true">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="Keyword" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>private</word>
       <word>protected</word>
       <word>public</word>
@@ -1434,14 +1440,17 @@
       <word>catch</word>
       <word>finally</word>
     </pattern>
+    <pattern name="TypeParameter" type="block" beginsWith="&lt;" endsWith="&gt;" includePatternTags="false">
+      <font name="Courier New" size="11" foreColor="#2B91AF"/>
+    </pattern>
     <pattern name="Comment" type="block" beginsWith="//" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="MultiLineComment" type="block" beginsWith="/*" endsWith="*/">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="Operators" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="red" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="red" />
       <word>+</word>
       <word>-</word>
       <word>=</word>
@@ -1449,10 +1458,10 @@
   </definition>
   <definition name="JavaScript" caseSensitive="true">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="Function" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="purple" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="purple" />
       <word>GetObject</word>
       <word>ScriptEngine</word>
       <word>ScriptEngineBuildVersion</word>
@@ -1460,7 +1469,7 @@
       <word>ScriptEngineMinorVersion</word>
     </pattern>
     <pattern name="Method" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>abs</word>
       <word>acos</word>
       <word>anchor</word>
@@ -1599,7 +1608,7 @@
       <word>writeln</word>
     </pattern>
     <pattern name="Object" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="red" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="red" />
       <word>ActiveXObject</word>
       <word>Array</word>
       <word>arguments</word>
@@ -1618,7 +1627,7 @@
       <word>VBArray</word>
     </pattern>
     <pattern name="Statement" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>if</word>
       <word>else</word>
       <word>switch</word>
@@ -1650,7 +1659,7 @@
       <word>@end</word>
     </pattern>
     <pattern name="Operator" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="red" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="red" />
       <word>+</word>
       <word>-</word>
       <word>=</word>
@@ -1661,7 +1670,7 @@
       <word>|</word>
     </pattern>
     <pattern name="Property" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="red" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="red" />
       <word>arguments</word>
       <word>callee</word>
       <word>caller</word>
@@ -1700,30 +1709,30 @@
       <word>undefined</word>
     </pattern>
     <pattern name="String" type="block" beginsWith="&quot;" endsWith="&quot;" escapesWith="\">
-      <font name="Courier New" size="11" style="regular" foreColor="#666666" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="#666666" />
     </pattern>
     <pattern name="Comment" type="block" beginsWith="//" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="MultiLineComment" type="block" beginsWith="/*" endsWith="*/">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
   </definition>
   <definition name="Mercury" caseSensitive="true">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="Comment" type="block" beginsWith="//" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="MultiLineComment" type="block" beginsWith="/*" endsWith="*/">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="String" type="block" beginsWith="&quot;" endsWith="&quot;" escapesWith="\">
-      <font name="Courier New" size="11" style="regular" foreColor="darkred" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="darkred" />
     </pattern>
     <pattern name="WordGroup01" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>where</word>
       <word>when</word>
       <word>use_module</word>
@@ -1778,10 +1787,10 @@
   </definition>
   <definition name="MSIL" caseSensitive="true">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="PreprocessorDirective" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
       <word>.addon</word>
       <word>.algorithm</word>
       <word>.assembly</word>
@@ -1845,7 +1854,7 @@
       <word>.zeroinit</word>
     </pattern>
     <pattern name="Keywords" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>abstract</word>
       <word>algorithm</word>
       <word>alignment</word>
@@ -2027,7 +2036,7 @@
       <word>with</word>
     </pattern>
     <pattern name="Instructions" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>add</word>
       <word>add.ovf</word>
       <word>add.ovf.un</word>
@@ -2271,7 +2280,7 @@
       <word>xor</word>
     </pattern>
     <pattern name="Operator" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="red" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="red" />
       <word>+</word>
       <word>-</word>
       <word>=</word>
@@ -2285,30 +2294,30 @@
       <word>==</word>
     </pattern>
     <pattern name="String" type="block" beginsWith="&quot;" endsWith="&quot;" escapesWith="\">
-      <font name="Courier New" size="11" style="regular" foreColor="#666666" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="#666666" />
     </pattern>
     <pattern name="Comment" type="block" beginsWith="//" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="char" type="block" beginsWith="'" endsWith="'" escapesWith="\">
-      <font name="Courier New" size="11" style="regular" foreColor="red" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="red" />
     </pattern>
   </definition>
   <definition name="Pascal" caseSensitive="true">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="Comment" type="block" beginsWith="//" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="MultiLineComment" type="block" beginsWith="/*" endsWith="*/">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="String" type="block" beginsWith="&quot;" endsWith="&quot;" escapesWith="\">
-      <font name="Courier New" size="11" style="regular" foreColor="darkred" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="darkred" />
     </pattern>
     <pattern name="WordGroup01" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>xor</word>
       <word>with</word>
       <word>while</word>
@@ -2380,19 +2389,19 @@
   </definition>
   <definition name="Perl" caseSensitive="true">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="Comment" type="block" beginsWith="//" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="MultiLineComment" type="block" beginsWith="/*" endsWith="*/">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="String" type="block" beginsWith="&quot;" endsWith="&quot;" escapesWith="\">
-      <font name="Courier New" size="11" style="regular" foreColor="darkred" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="darkred" />
     </pattern>
     <pattern name="WordGroup01" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>WRITE</word>
       <word>write</word>
       <word>warn</word>
@@ -2642,22 +2651,22 @@
   </definition>
   <definition name="PHP" caseSensitive="false">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="Comment" type="block" beginsWith="//" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="AlternativeComment" type="block" beginsWith="#" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="MultiLineComment" type="block" beginsWith="/*" endsWith="*/">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="String" type="block" beginsWith="&quot;" endsWith="&quot;" escapesWith="\">
-      <font name="Courier New" size="11" style="regular" foreColor="darkred" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="darkred" />
     </pattern>
     <pattern name="WordGroup01" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>while</word>
       <word>var</word>
       <word>true</word>
@@ -2694,7 +2703,7 @@
       <word>as</word>
     </pattern>
     <pattern name="WordGroup02" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="orange" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="orange" />
       <word>zend_version</word>
       <word>zend_test_func</word>
       <word>zend_logo_guid</word>
@@ -4591,19 +4600,19 @@
   </definition>
   <definition name="Python" caseSensitive="true">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="Comment" type="block" beginsWith="//" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="MultiLineComment" type="block" beginsWith="/*" endsWith="*/">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="String" type="block" beginsWith="&quot;" endsWith="&quot;" escapesWith="\">
-      <font name="Courier New" size="11" style="regular" foreColor="#666666" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="#666666" />
     </pattern>
     <pattern name="WordGroup01" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>zfill</word>
       <word>XRangeType</word>
       <word>xor</word>
@@ -5082,19 +5091,19 @@
   </definition>
   <definition name="Ruby" caseSensitive="true">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="Comment" type="block" beginsWith="#" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="MultiLineComment" type="block" beginsWith="/*" endsWith="*/">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="String" type="block" beginsWith="&quot;" endsWith="&quot;" escapesWith="\">
-      <font name="Courier New" size="11" style="regular" foreColor="#666666" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="#666666" />
     </pattern>
     <pattern name="WordGroup01" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>yield</word>
       <word>while</word>
       <word>when</word>
@@ -5137,7 +5146,7 @@
       <word>__FILE__</word>
     </pattern>
     <pattern name="WordGroup02" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="darkblue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="darkblue" />
       <word>untrace_var</word>
       <word>trap</word>
       <word>trace_var</word>
@@ -5203,7 +5212,7 @@
       <word>Array</word>
     </pattern>
     <pattern name="WordGroup03" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="red" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="red" />
       <word>ZeroDivisionError</word>
       <word>TypeError</word>
       <word>Time</word>
@@ -5252,10 +5261,10 @@
   </definition>
   <definition name="SQL" caseSensitive="false">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="SysTable" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="lawngreen" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="lawngreen" />
       <word>sysaltfiles</word>
       <word>syslockinfo</word>
       <word>syscacheobjects</word>
@@ -5307,7 +5316,7 @@
       <word>systaskids</word>
     </pattern>
     <pattern name="SysProc" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="brown" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="brown" />
       <word>sp_bindsession</word>
       <word>sp_column_privileges_ex</word>
       <word>sp_createorphan</word>
@@ -5484,7 +5493,7 @@
       <word>xp_varbintohexstr</word>
     </pattern>
     <pattern name="GlobalVariable" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="fuchsia" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="fuchsia" />
       <word>@@DATEFIRST</word>
       <word>@@OPTIONS</word>
       <word>@@DBTS</word>
@@ -5520,7 +5529,7 @@
       <word>@@TOTAL_WRITE</word>
     </pattern>
     <pattern name="ReservedKeyword" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>sysname</word>
       <word>ADD</word>
       <word>EXCEPT</word>
@@ -5678,7 +5687,7 @@
       <word>OUT</word>
     </pattern>
     <pattern name="Function" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="fuchsia" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="fuchsia" />
       <word>AVG</word>
       <word>MAX</word>
       <word>BINARY_CHECKSUM</word>
@@ -5826,7 +5835,7 @@
       <word>USER</word>
     </pattern>
     <pattern name="DataType" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>bigint</word>
       <word>int</word>
       <word>smallint</word>
@@ -5856,7 +5865,7 @@
       <word>uniqueidentifier</word>
     </pattern>
     <pattern name="Operator" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="silver" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="silver" />
       <word>ALL</word>
       <word>AND</word>
       <word>EXISTS</word>
@@ -5873,7 +5882,7 @@
       <word>OUTER</word>
     </pattern>
     <pattern name="SystemFunction" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="brown" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="brown" />
       <word>fn_listextendedproperty</word>
       <word>fn_trace_getinfo</word>
       <word>fn_trace_gettable</word>
@@ -5885,27 +5894,27 @@
       <word>fn_virtualfilestats</word>
     </pattern>
     <pattern name="Comment" type="block" beginsWith="--" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="teal" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="teal" />
     </pattern>
     <pattern name="BlockComment" type="block" beginsWith="/*" endsWith="*/">
-      <font name="Courier New" size="11" style="regular" foreColor="teal" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="teal" />
     </pattern>
     <pattern name="String" type="block" beginsWith="'" endsWith="'">
-      <font name="Courier New" size="11" style="regular" foreColor="red" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="red" />
     </pattern>
   </definition>
   <definition name="Visual Basic" caseSensitive="false">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="String" type="block" beginsWith="&quot;" endsWith="&quot;">
-      <font name="Courier New" size="11" style="regular" foreColor="#666666" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="#666666" />
     </pattern>
     <pattern name="Comment" type="block" beginsWith="&apos;" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="Keyword" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>Xor</word>
       <word>WriteOnly</word>
       <word>WithEvents</word>
@@ -6061,16 +6070,16 @@
   </definition>
   <definition name="VBScript" caseSensitive="false">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="String" type="block" beginsWith="&quot;" endsWith="&quot;">
-      <font name="Courier New" size="11" style="regular" foreColor="#666666" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="#666666" />
     </pattern>
     <pattern name="Comment" type="block" beginsWith="&apos;" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="Keyword" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>year</word>
       <word>xor</word>
       <word>write</word>
@@ -6259,10 +6268,10 @@
   </definition>
   <definition name="VB.NET" caseSensitive="false">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="Keyword" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>Alias</word>
       <word>Ansi</word>
       <word>As</word>
@@ -6330,7 +6339,7 @@
       <word>WriteOnly</word>
     </pattern>
     <pattern name="Statement" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>AddHandler</word>
       <word>Call</word>
       <word>Class</word>
@@ -6389,7 +6398,7 @@
       <word>End</word>
     </pattern>
     <pattern name="Property" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>Count</word>
       <word>DateString</word>
       <word>Description</word>
@@ -6411,18 +6420,18 @@
       <word>Today</word>
     </pattern>
     <pattern name="Object" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>Err</word>
     </pattern>
     <pattern name="Method" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>Add</word>
       <word>Clear</word>
       <word>Raise</word>
       <word>Remove</word>
     </pattern>
     <pattern name="Function" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>Abs</word>
       <word>AppActivate</word>
       <word>Asc</word>
@@ -6588,7 +6597,7 @@
       <word>Year</word>
     </pattern>
     <pattern name="DataType" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="blue" />
       <word>Boolean</word>
       <word>Byte</word>
       <word>Char</word>
@@ -6603,13 +6612,13 @@
       <word>String</word>
     </pattern>
     <pattern name="String" type="block" beginsWith="&quot;" endsWith="&quot;">
-      <font name="Courier New" size="11" style="regular" foreColor="#666666" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="#666666" />
     </pattern>
     <pattern name="Comment" type="block" beginsWith="&apos;" endsWith="\n">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="Operator" type="word">
-      <font name="Courier New" size="11" style="regular" foreColor="red" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="red" />
       <word>+</word>
       <word>-</word>
       <word>=</word>
@@ -6631,16 +6640,16 @@
   </definition>
   <definition name="XML" caseSensitive="false">
     <default>
-      <font name="Courier New" size="11" style="regular" foreColor="black" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="black" />
     </default>
     <pattern name="MultiLineComment" type="block" beginsWith="&amp;lt;!-" endsWith="-&amp;gt;">
-      <font name="Courier New" size="11" style="regular" foreColor="green" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="green" />
     </pattern>
     <pattern name="Markup" type="markup" highlightAttributes="true">
-      <font name="Courier New" size="11" style="regular" foreColor="maroon" backColor="transparent">
-        <bracketStyle foreColor="blue" backColor="transparent"/>
-        <attributeNameStyle foreColor="red" backColor="transparent"/>
-        <attributeValueStyle foreColor="blue" backColor="transparent"/>
+      <font name="Courier New" size="11" foreColor="maroon" >
+        <bracketStyle foreColor="blue" />
+        <attributeNameStyle foreColor="red" />
+        <attributeValueStyle foreColor="blue" />
       </font>
     </pattern>
   </definition>
