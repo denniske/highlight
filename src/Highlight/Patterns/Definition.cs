@@ -30,7 +30,7 @@ namespace Highlight.Patterns
                     if (blockPatterns.Length > 1) {
                         blockPatterns.Append("|");
                     }
-                    blockPatterns.AppendFormat("(?'{0}'{1})", pattern.Name, pattern.GetRegexPattern());
+                    blockPatterns.Append(pattern.GetRegexPattern());
                 }
                 else if (pattern is MarkupPattern) {
                     if (markupPatterns.Length > 1) {

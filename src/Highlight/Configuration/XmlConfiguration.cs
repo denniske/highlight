@@ -22,7 +22,8 @@ namespace Highlight.Configuration
 
         public XmlConfiguration(XDocument xmlDocument)
         {
-            if (xmlDocument == null) {
+            if (xmlDocument == null)
+            {
                 throw new ArgumentNullException("xmlDocument");
             }
 
@@ -35,7 +36,8 @@ namespace Highlight.Configuration
 
         private IDictionary<string, Definition> GetDefinitions()
         {
-            if (definitions == null) {
+            if (definitions == null)
+            {
                 definitions = XmlDocument
                     .Descendants("definition")
                     .Select(GetDefinition)
@@ -69,13 +71,16 @@ namespace Highlight.Configuration
         {
             const StringComparison stringComparison = StringComparison.OrdinalIgnoreCase;
             var patternType = patternElement.GetAttributeValue("type");
-            if (patternType.Equals("block", stringComparison)) {
+            if (patternType.Equals("block", stringComparison))
+            {
                 return GetBlockPattern(patternElement);
             }
-            if (patternType.Equals("markup", stringComparison)) {
+            if (patternType.Equals("markup", stringComparison))
+            {
                 return GetMarkupPattern(patternElement);
             }
-            if (patternType.Equals("word", stringComparison)) {
+            if (patternType.Equals("word", stringComparison))
+            {
                 return GetWordPattern(patternElement);
             }
 
@@ -89,8 +94,9 @@ namespace Highlight.Configuration
             var beginsWith = patternElement.GetAttributeValue("beginsWith");
             var endsWith = patternElement.GetAttributeValue("endsWith");
             var escapesWith = patternElement.GetAttributeValue("escapesWith");
-
-            return new BlockPattern(name, style, beginsWith, endsWith, escapesWith);
+            var includePatternStr = patternElement.GetAttributeValue("includePatternTags");
+            var includePatternTags = !String.IsNullOrEmpty(includePatternStr) ? Boolean.Parse(includePatternStr) : true;
+            return new BlockPattern(name, style, beginsWith, endsWith, escapesWith, includePatternTags);
         }
 
         private MarkupPattern GetMarkupPattern(XElement patternElement)
@@ -118,7 +124,8 @@ namespace Highlight.Configuration
         {
             var words = new List<string>();
             var wordElements = patternElement.Descendants("word");
-            if (wordElements != null) {
+            if (wordElements != null)
+            {
                 words.AddRange(from wordElement in wordElements select Regex.Escape(wordElement.Value));
             }
 
@@ -137,15 +144,21 @@ namespace Highlight.Configuration
         private ColorPair GetPatternColors(XElement fontElement)
         {
             var foreColor = Color.FromName(fontElement.GetAttributeValue("foreColor"));
-            var backColor = Color.FromName(fontElement.GetAttributeValue("backColor"));
 
+            string colorStr = fontElement.GetAttributeValue("backColor");
+            Color backColor = Color.Transparent;
+            if (!String.IsNullOrEmpty(colorStr))
+            {
+                backColor = Color.FromName(colorStr);
+            }
             return new ColorPair(foreColor, backColor);
         }
 
         private Font GetPatternFont(XElement fontElement, Font defaultFont = null)
         {
             var fontFamily = fontElement.GetAttributeValue("name");
-            if (fontFamily != null) {
+            if (fontFamily != null)
+            {
                 var emSize = fontElement.GetAttributeValue("size").ToSingle(11f);
                 var style = Enum<FontStyle>.Parse(fontElement.GetAttributeValue("style"), FontStyle.Regular, true);
 
@@ -177,7 +190,8 @@ namespace Highlight.Configuration
         {
             var fontElement = patternElement.Descendants("font").Single();
             var element = fontElement.Descendants(descendantName).SingleOrDefault();
-            if (element != null) {
+            if (element != null)
+            {
                 var colors = GetPatternColors(element);
 
                 return colors;
@@ -199,7 +213,12 @@ namespace Highlight.Configuration
         private ColorPair GetDefinitionColors(XElement fontElement)
         {
             var foreColor = Color.FromName(fontElement.GetAttributeValue("foreColor"));
-            var backColor = Color.FromName(fontElement.GetAttributeValue("backColor"));
+            string colorStr = fontElement.GetAttributeValue("backColor");
+            Color backColor = Color.Transparent;
+            if (!String.IsNullOrEmpty(colorStr))
+            {
+                backColor = Color.FromName(colorStr);
+            }
 
             return new ColorPair(foreColor, backColor);
         }
@@ -208,7 +227,7 @@ namespace Highlight.Configuration
         {
             var fontName = fontElement.GetAttributeValue("name");
             var fontSize = Convert.ToSingle(fontElement.GetAttributeValue("size"));
-            var fontStyle = (FontStyle) Enum.Parse(typeof(FontStyle), fontElement.GetAttributeValue("style"), true);
+            var fontStyle = Enum<FontStyle>.Parse(fontElement.GetAttributeValue("style"), FontStyle.Regular, true);
 
             return new Font(fontName, fontSize, fontStyle);
         }

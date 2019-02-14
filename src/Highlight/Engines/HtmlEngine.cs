@@ -1,4 +1,5 @@
 using System;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
@@ -49,8 +50,35 @@ namespace Highlight.Engines
             if (!UseCss)
             {
                 var patternStyle = HtmlEngineHelper.CreatePatternStyle(pattern.Style);
+                string val = match.Value;
+                if (!pattern.IncludePatternTags)
+                {
+                    string prefix = WebUtility.HtmlEncode(pattern.BeginsWith);
+                    string suffix = WebUtility.HtmlEncode(pattern.EndsWith);
+                    if (val.StartsWith(prefix))
+                    {
+                        val = val.TrimStart(prefix.ToCharArray());
+                    }
+                    else
+                    {
+                        prefix = "";
+                    }
+                    if (val.EndsWith(suffix))
+                    {
+                        val = val.TrimEnd(suffix.ToCharArray());
+                    }
+                    else
+                    {
+                        suffix = "";
+                    }
 
-                return String.Format(StyleSpanFormat, patternStyle, match.Value);
+                    return $"{prefix}{String.Format(StyleSpanFormat, patternStyle, val)}{suffix}";
+                }
+                else
+                {
+                    return String.Format(StyleSpanFormat, patternStyle, val);
+                }
+
             }
 
             var cssClassName = HtmlEngineHelper.CreateCssClassName(definition.Name, pattern.Name);
