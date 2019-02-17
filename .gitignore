@@ -11,3 +11,5 @@ packages/
 *.log
 
 Thumbs.db
+/src/.vs/
+/.vs
