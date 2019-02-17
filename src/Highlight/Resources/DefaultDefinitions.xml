@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <definitions>
+  <definition name="None" caseSensitive="false">
+    <default>
+      <font name="Courier New" size="11" foreColor="black" />
+    </default>
+  </definition>
   <definition name="ASPX" caseSensitive="false">
     <default>
       <font name="Courier New" size="11" foreColor="black" />
