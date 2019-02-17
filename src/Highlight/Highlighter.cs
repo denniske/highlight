@@ -1,6 +1,7 @@
 using System;
 using Highlight.Configuration;
 using Highlight.Engines;
+using Highlight.Patterns;
 
 namespace Highlight
 {
@@ -22,16 +23,20 @@ namespace Highlight
 
         public string Highlight(string definitionName, string input)
         {
-            if (definitionName == null) {
+            if (definitionName == null)
+            {
                 throw new ArgumentNullException("definitionName");
             }
-
-            if (Configuration.Definitions.ContainsKey(definitionName)) {
-                var definition = Configuration.Definitions[definitionName];
-                return Engine.Highlight(definition, input);
+            Definition definition = null;
+            if (Configuration.Definitions.ContainsKey(definitionName))
+            {
+                definition = Configuration.Definitions[definitionName];
             }
-
-            return input;
+            else
+            {
+                definition = Configuration.Definitions["None"];
+            }
+            return Engine.Highlight(definition, input);
         }
     }
 }

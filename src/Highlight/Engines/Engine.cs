@@ -60,7 +60,7 @@ namespace Highlight.Engines
                 throw new ArgumentNullException("match");
             }
 
-            var pattern = definition.Patterns.First(x => match.Groups[x.Key].Success).Value;
+            var pattern = definition.Patterns.FirstOrDefault(x => match.Groups[x.Key].Success).Value;
             if (pattern != null) {
                 if (pattern is BlockPattern) {
                     return ProcessBlockPatternMatch(definition, (BlockPattern) pattern, match);
